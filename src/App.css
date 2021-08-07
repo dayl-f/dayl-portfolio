@@ -1,38 +1,609 @@
-.App {
-  text-align: center;
+#root {
+  height: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  z-index: 6;
+  width: 100%;
+  height: 15%;
+}
+
+nav .logo-container {
+  position: absolute;
+  left: 3%;
+  top: 16%;
+  z-index: 5;
+  -webkit-transition: -webkit-transform .4s ease-in-out;
+  transition: -webkit-transform .4s ease-in-out;
+  transition: transform .4s ease-in-out;
+  transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
+}
+
+nav .bottomLoc {
+  -webkit-transform: translateY(83vh) translateX(10vw);
+          transform: translateY(83vh) translateX(10vw);
+}
+
+nav .nav-cont {
+  width: 90%;
+  padding: 0 0 0 10%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+nav .nav-cont li {
+  margin: 0 4%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 10%;
+}
+
+nav .nav-cont li a {
+  padding: 5% 10%;
+  font-size: 1vw;
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav .nav-cont li span {
+  width: 0%;
+  height: 2px;
+  -webkit-transition: width .3s ease-in-out;
+  transition: width .3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
+nav .nav-cont li:hover {
+  cursor: pointer;
+}
+
+nav .nav-cont li:hover span {
+  width: 80%;
+  height: 1px;
+  background-color: #1F7DC0;
+}
+
+nav .nav-cont .active span {
+  width: 80%;
+  height: 1px;
+  background-color: #1F7DC0;
+}
+
+#main-cont {
+  width: 100%;
+}
+
+.about-section, .project-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+@-webkit-keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+.main-title-cont {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 4;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.main-title-cont .title {
+  padding-left: 30%;
+  padding-bottom: 20%;
+  -webkit-animation: fadeIn 1s ease-in-out forwards;
+          animation: fadeIn 1s ease-in-out forwards;
+  opacity: 0;
+  -webkit-transform: translateX(30%);
+          transform: translateX(30%);
+}
+
+.main-title-cont .title h2 {
+  font-size: 5vw;
+  line-height: 50%;
+  margin: 0;
+}
+
+.main-title-cont .title h1 {
+  font-size: 6.5vw;
+  line-height: 100%;
+  margin: 0;
+}
+
+.myimage-cont {
+  position: relative;
+  width: 40%;
+  overflow: visible;
+}
+
+.myimage-cont .main-myimage {
+  position: absolute;
+  width: 220%;
+  left: -55%;
+}
+
+.myimage-cont .shadow {
+  opacity: .4;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  left: -55%;
+}
+
+.myimage-cont .sh0 {
+  z-index: 4;
+}
+
+.myimage-cont .sh1 {
+  z-index: 3;
+  -webkit-filter: brightness(-10%);
+          filter: brightness(-10%);
+}
+
+.myimage-cont .sh2 {
+  z-index: 2;
+  -webkit-filter: brightness(-15%);
+          filter: brightness(-15%);
+}
+
+.myimage-cont .sh3 {
+  opacity: .3;
+  z-index: 1;
+  -webkit-filter: brightness(-20%);
+          filter: brightness(-20%);
+}
+
+@-webkit-keyframes fadeInTop {
+  from {
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInTop {
+  from {
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes lineAppear {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes lineAppear {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+.description-cont {
+  position: relative;
+}
+
+.description-cont span {
+  -webkit-animation: lineAppear .5s ease-out forwards .8s;
+          animation: lineAppear .5s ease-out forwards .8s;
+}
+
+.main-desc {
+  -webkit-animation: fadeInTop 1s ease-in-out forwards 1.3s;
+          animation: fadeInTop 1s ease-in-out forwards 1.3s;
+  -webkit-transform: translateY(-30%);
+          transform: translateY(-30%);
+  opacity: 0;
+}
+
+.project-section, .contact-section {
+  position: relative;
+  overflow: visible;
+  margin: 15% 0 5% 0;
+}
+
+.main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+.main-content .right-content, .main-content .left-content {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-content .title.contact {
+  text-align: right;
+  overflow: visible;
+}
+
+.main-content .title.contact .cont {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: visible;
+  position: relative;
+}
+
+.main-content .title.contact span {
+  position: absolute;
+  height: 3px;
+  width: 10vw;
+  left: -55%;
+  background-color: #ffffff;
+}
+
+.main-content .title h1 {
+  font-size: 3.2vw;
+  margin: 0;
+}
+
+.main-content .title h2 {
+  font-weight: 200;
+  font-size: 3.2vw;
+  margin: 0;
+  line-height: 50%;
+  text-align: right;
+}
+
+.main-content .title h3 {
+  margin: 0;
+  font-weight: 200;
+  font-size: 1.7vw;
+  width: 60%;
+}
+
+.main-content .details {
+  width: 100%;
+  text-align: start;
+}
+
+.main-content .details ul {
+  list-style: none;
+}
+
+.main-content .details ul li {
+  font-size: 1.1vw;
+}
+
+.main-content .button-content {
+  margin: 5%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.main-content .button-content button {
+  cursor: pointer;
+  background-color: rgba(133, 133, 133, 0.282);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: none;
+  padding: 4% 6%;
+  border-radius: 12px;
+  font-weight: normal;
+  color: white;
+  -webkit-box-shadow: 0 0 10px 0 #ffffff64;
+          box-shadow: 0 0 10px 0 #ffffff64;
+  -webkit-transition: background-color .4s ease-in-out;
+  transition: background-color .4s ease-in-out;
+}
+
+.main-content .button-content button:focus, .main-content .button-content button:hover {
+  outline: none;
+  cursor: pointer;
+  background-color: #858585;
+}
+
+.main-content .image-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-content .image-cont img {
+  width: 50%;
+}
+
+.main-content .circle {
+  width: 25vw;
+  height: 25vw;
+  border-radius: 50%;
+}
+
+.background-project {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  z-index: -5;
+}
+
+.background-project .background-cont {
+  position: relative;
+  width: 30%;
+}
+
+.background-project .background-cont h1 {
+  -webkit-transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg);
+          transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg);
+  color: #1F7DC0;
+  position: absolute;
+  font-size: 25vw;
+  margin: 0;
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
+}
+
+.background-project .background-cont .main-backs {
+  z-index: 5;
+}
+
+.background-project .background-cont .main-back {
+  position: absolute;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 4px white;
+}
+
+.background-project .background-cont .back1 {
+  -webkit-transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg) translate(0%, 0%);
+          transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg) translate(0%, 0%);
+  -webkit-transition: -webkit-transform .6s ease-in-out;
+  transition: -webkit-transform .6s ease-in-out;
+  transition: transform .6s ease-in-out;
+  transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out;
+  opacity: .9;
+}
+
+.background-project .background-cont .back2 {
+  -webkit-transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg) translate(0%, 0%);
+          transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg) translate(0%, 0%);
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
+  transition: transform .8s ease-in-out, -webkit-transform .8s ease-in-out;
+  opacity: .7;
+}
+
+.background-project .background-cont .back3 {
+  -webkit-transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg) translate(0%, 0%);
+          transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg) translate(0%, 0%);
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  opacity: .5;
+}
+
+.background-project .background-cont .back4 {
+  -webkit-transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg) translate(0%, 0%);
+          transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg) translate(0%, 0%);
+  -webkit-transition: -webkit-transform 1.2s ease-in-out;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+  opacity: .3;
+}
+
+.background-project .background-cont .back5 {
+  -webkit-transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg) translate(0%, 0%);
+          transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg) translate(0%, 0%);
+  -webkit-transition: -webkit-transform 1.4s ease-in-out;
+  transition: -webkit-transform 1.4s ease-in-out;
+  transition: transform 1.4s ease-in-out;
+  transition: transform 1.4s ease-in-out, -webkit-transform 1.4s ease-in-out;
+  opacity: .1;
+}
+
+.background-project .background-cont .active1 {
+  -webkit-transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg) translate(-1%, 5%);
+          transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg) translate(-1%, 5%);
+  opacity: .9;
+}
+
+.background-project .background-cont .active2 {
+  -webkit-transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg) translate(-2%, 10%);
+          transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg) translate(-2%, 10%);
+  opacity: .7;
+}
+
+.background-project .background-cont .active3 {
+  -webkit-transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg) translate(-3%, 15%);
+          transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg) translate(-3%, 15%);
+  opacity: .5;
+}
+
+.background-project .background-cont .active4 {
+  -webkit-transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg) translate(-4%, 20%);
+          transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg) translate(-4%, 20%);
+  opacity: .3;
+}
+
+.background-project .background-cont .active5 {
+  -webkit-transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg) translate(-5%, 25%);
+          transform: rotateZ(-50deg) rotateX(40deg) rotateY(35deg) translate(-5%, 25%);
+  opacity: .1;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10%;
+}
+
+footer p {
+  font-weight: 200;
+  padding-right: 10%;
+}
+
+@-webkit-keyframes bubblyEffect {
+  0% {
+    border-radius: 45% 40%;
+  }
+  25% {
+    border-radius: 50% 44% 45% 35%;
+  }
+  50% {
+    border-radius: 47% 48%;
+  }
+  75% {
+    border-radius: 50% 44% 45% 35%;
+  }
+  100% {
+    border-radius: 45% 40%;
+  }
+}
+
+@keyframes bubblyEffect {
+  0% {
+    border-radius: 45% 40%;
+  }
+  25% {
+    border-radius: 50% 44% 45% 35%;
+  }
+  50% {
+    border-radius: 47% 48%;
+  }
+  75% {
+    border-radius: 50% 44% 45% 35%;
+  }
+  100% {
+    border-radius: 45% 40%;
+  }
+}
+
+.contact-image .circle-out {
+  -webkit-animation: bubblyEffect 3s ease-in-out infinite;
+          animation: bubblyEffect 3s ease-in-out infinite;
+}
+/*# sourceMappingURL=App.css.map */
