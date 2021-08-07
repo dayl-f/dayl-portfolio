@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/dayl-portfolio/static/css/main.d3a6ed54.chunk.css",
+    "main.js": "/dayl-portfolio/static/js/main.8595d77f.chunk.js",
+    "main.js.map": "/dayl-portfolio/static/js/main.8595d77f.chunk.js.map",
+    "runtime-main.js": "/dayl-portfolio/static/js/runtime-main.746c7c23.js",
+    "runtime-main.js.map": "/dayl-portfolio/static/js/runtime-main.746c7c23.js.map",
+    "static/js/2.217e7a83.chunk.js": "/dayl-portfolio/static/js/2.217e7a83.chunk.js",
+    "static/js/2.217e7a83.chunk.js.map": "/dayl-portfolio/static/js/2.217e7a83.chunk.js.map",
+    "index.html": "/dayl-portfolio/index.html",
+    "static/css/main.d3a6ed54.chunk.css.map": "/dayl-portfolio/static/css/main.d3a6ed54.chunk.css.map",
+    "static/js/2.217e7a83.chunk.js.LICENSE.txt": "/dayl-portfolio/static/js/2.217e7a83.chunk.js.LICENSE.txt",
+    "static/media/DELTA_004.7d038e6c.png": "/dayl-portfolio/static/media/DELTA_004.7d038e6c.png",
+    "static/media/DSC01699.742b6f72.jpg": "/dayl-portfolio/static/media/DSC01699.742b6f72.jpg",
+    "static/media/IMG_1193.48113bf2.png": "/dayl-portfolio/static/media/IMG_1193.48113bf2.png",
+    "static/media/index.css": "/dayl-portfolio/static/media/POPPINS-THIN.a61eaf4c.TTF"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.746c7c23.js",
+    "static/js/2.217e7a83.chunk.js",
+    "static/css/main.d3a6ed54.chunk.css",
+    "static/js/main.8595d77f.chunk.js"
+  ]
+}
