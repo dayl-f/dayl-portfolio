@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/dayl-portfolio/static/css/main.a4b5d8d8.chunk.css",
-    "main.js": "/dayl-portfolio/static/js/main.6b0a0973.chunk.js",
-    "main.js.map": "/dayl-portfolio/static/js/main.6b0a0973.chunk.js.map",
+    "main.js": "/dayl-portfolio/static/js/main.0739e9b2.chunk.js",
+    "main.js.map": "/dayl-portfolio/static/js/main.0739e9b2.chunk.js.map",
     "runtime-main.js": "/dayl-portfolio/static/js/runtime-main.746c7c23.js",
     "runtime-main.js.map": "/dayl-portfolio/static/js/runtime-main.746c7c23.js.map",
     "static/js/2.217e7a83.chunk.js": "/dayl-portfolio/static/js/2.217e7a83.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.746c7c23.js",
     "static/js/2.217e7a83.chunk.js",
     "static/css/main.a4b5d8d8.chunk.css",
-    "static/js/main.6b0a0973.chunk.js"
+    "static/js/main.0739e9b2.chunk.js"
   ]
 }
